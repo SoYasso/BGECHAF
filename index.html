@@ -306,7 +306,7 @@
 
 <!-- HERO -->
 <section class="hero">
-  <video class="hero-video" autoplay muted loop playsinline oncanplay="this.playbackRate=0.25;"><source src="214661_medium.mp4" type="video/mp4"></video>
+  <video class="hero-video" id="heroVideo" autoplay muted loop playsinline><source src="214661_medium.mp4" type="video/mp4"></video>
   <div class="slide slide1 active">
     <div class="slide-overlay"></div>
     <div class="slide-content">
@@ -582,6 +582,18 @@
 </footer>
 
 <script>
+// VIDEO SPEED — iOS Safari ne supporte pas playbackRate < 0.5
+(function(){
+  var v=document.getElementById('heroVideo');
+  if(!v)return;
+  var isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream;
+  var rate=isIOS?0.5:0.25;
+  v.addEventListener('canplay',function(){
+    try{v.playbackRate=rate;}catch(e){}
+    v.play().catch(function(){});
+  },{once:true});
+})();
+
 // SLIDER
 let cur=0;
 const slides=document.querySelectorAll('.slide');
