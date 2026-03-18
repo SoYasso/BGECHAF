@@ -195,7 +195,8 @@ footer{background:var(--navy3);}
 .sr-r{opacity:0;transform:translateX(30px);transition:opacity .7s ease,transform .7s ease;}
 .sr-r.v{opacity:1;transform:translateX(0);}
 
-/* LOGO SVG */
+/* LOGO */
+.logo-img{height:36px;width:auto;display:block;flex-shrink:0;object-fit:contain;}
 .logo-icon{height:46px;width:auto;display:block;flex-shrink:0;color:var(--navy);}
 .logo-icon .logo-win{fill:#fff;}
 footer .logo-icon{color:#fff;}
