@@ -28,14 +28,10 @@ nav.scrolled .nav-links li a{height:62px;line-height:62px;}
 
 /* HERO SLIDER */
 .hero{position:relative;height:100vh;min-height:580px;overflow:hidden;}
-.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;display:flex;align-items:center;}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;display:flex;align-items:center;z-index:1;}
 .slide.active{opacity:1;}
-.slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.08);transition:transform 8s ease;}
-.slide.active .slide-bg{transform:scale(1);}
-.slide-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,22,38,.87) 0%,rgba(13,22,38,.5) 55%,transparent 100%);}
-.slide1 .slide-bg{background-image:url('chantier1.jpg');}
-.slide2 .slide-bg{background-image:url('chantier2.jpg');}
-.slide3 .slide-bg{background-image:url('chantier3.jpg');}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;}
+.slide-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,22,38,.87) 0%,rgba(13,22,38,.5) 55%,transparent 100%);z-index:1;}
 .slide-content{position:relative;z-index:2;padding:0 7%;max-width:680px;}
 .slide-eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:22px;opacity:0;transform:translateY(20px);transition:all .7s ease .3s;}
 .slide.active .slide-eyebrow{opacity:1;transform:translateY(0);}
