@@ -9,7 +9,7 @@
 .topbar-left{display:flex;gap:28px;align-items:center;}
 
 /* BARRE DE BOUTONS */
-.btn-nav-top{position:absolute;top:20px;left:6%;z-index:10;}
+.btn-nav-top{position:absolute;top:20px;left:50%;transform:translateX(-50%);z-index:10;}
 .btn-nav-bar{position:absolute;bottom:160px;right:6%;z-index:10;display:flex;flex-direction:column;align-items:flex-end;gap:12px;background:transparent;}
 .btn-nav{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#fff;text-decoration:none;border:2px solid rgba(255,255,255,.35);border-radius:4px;background:rgba(0,0,0,.18);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:all .25s;white-space:nowrap;cursor:pointer;}
 .btn-nav:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.7);color:#fff;}
@@ -19,7 +19,7 @@
 .btn-nav-devis{background:var(--gold);color:var(--navy);border-color:var(--gold);font-weight:800;backdrop-filter:none;}
 .btn-nav-devis:hover{background:var(--gold2);border-color:var(--gold2);color:var(--navy);}
 @media(max-width:640px){
-.btn-nav-top{top:12px;left:4%;}
+.btn-nav-top{top:12px;left:50%;transform:translateX(-50%);}
 .btn-nav-bar{bottom:100px;right:3%;gap:8px;}
 .btn-nav{padding:7px 10px;font-size:10px;}
 .btn-nav-logo-img{height:26px;}}
