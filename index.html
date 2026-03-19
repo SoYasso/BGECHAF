@@ -256,40 +256,23 @@
   <a href="mailto:Contact.bgechafaudage@gmail.com">✉️ Contact.bgechafaudage@gmail.com</a>
 </div>
 
-<nav id="nav">
-  <a href="javascript:void(0)" class="nav-logo">
-    <img src="Logo-BG1223.jpeg" alt="Logo BG Echafaudage" class="logo-img">
-    <div class="nav-logo-text">BG ECHAFAUDAGE</div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#about">Qui sommes-nous</a></li>
-    <li><a href="#realisations">Réalisations</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#contact" class="nav-cta">Devis gratuit</a></li>
-  </ul>
-
-  <div class="burger" id="burger" onclick="toggleMob()"><span></span><span></span><span></span></div>
-</nav>
-
-<div class="mob-nav" id="mobNav">
-  <a href="#about" onclick="closeMob()">Qui sommes-nous</a>
-  <a href="#realisations" onclick="closeMob()">Réalisations</a>
-  <a href="#faq" onclick="closeMob()">FAQ</a>
-  <a href="#contact" onclick="closeMob()" class="mob-cta">Devis gratuit</a>
-</div>
-
 <!-- HERO -->
 <section class="hero">
   <video class="hero-video" id="heroVideo" autoplay muted loop playsinline><source src="214661_medium.mp4" type="video/mp4"></video>
+  <a href="javascript:void(0)" class="btn-nav btn-nav-logo btn-nav-top">
+    <img src="Logo-BG1223.jpeg" alt="Logo BG Echafaudage" class="btn-nav-logo-img">
+    <span>BG ECHAFAUDAGE</span>
+  </a>
+  <div class="btn-nav-bar">
+    <a href="#about" class="btn-nav">Qui sommes-nous</a>
+    <a href="#realisations" class="btn-nav">Réalisations</a>
+    <a href="#faq" class="btn-nav">FAQ</a>
+    <a href="#contact" class="btn-nav btn-nav-devis">Devis gratuit</a>
+  </div>
   <div class="slide slide1 active">
     <div class="slide-overlay"></div>
     <div class="slide-content">
-      <div class="slide-eyebrow">Montage d'échafaudages – NAF 43.99B</div>
       <h1 class="slide-title">Montage, démontage, réception et location<br><em>d'échafaudages professionnels</em></h1>
-      <p class="slide-sub">BG Echafaudage intervient sur tous vos chantiers — construction neuve, rénovation de façade, réfection de toiture. Devis gratuit sous 48h, basé à Roussillon (38).</p>
-      <div class="slide-btns">
-        <a href="#contact" class="btn-gold">Demander un devis gratuit</a>
-      </div>
     </div>
   </div>
   <div class="slide slide2">
@@ -298,10 +281,6 @@
       <div class="slide-eyebrow">Matériel certifié EN 12810 &amp; EN 12811</div>
       <h1 class="slide-title">Sécurité &amp; conformité<br><em>sur chaque chantier</em></h1>
       <p class="slide-sub">Nos structures d'échafaudage respectent les normes européennes en vigueur. Équipes qualifiées, intervention rapide partout en région Auvergne-Rhône-Alpes.</p>
-      <div class="slide-btns">
-        <a href="#contact" class="btn-gold">Demander un devis</a>
-        <a href="#about" class="btn-outline-w">En savoir plus</a>
-      </div>
     </div>
   </div>
   <div class="slide slide3">
@@ -310,10 +289,6 @@
       <div class="slide-eyebrow">Façadier · Suspendu · Parapluie · Roulant</div>
       <h1 class="slide-title">Toutes structures<br><em>pour tous vos chantiers</em></h1>
       <p class="slide-sub">Rénovation de façade, isolation extérieure, réfection de toiture, construction neuve… BG Echafaudage s'adapte à chaque projet avec les structures les plus adaptées.</p>
-      <div class="slide-btns">
-        <a href="#realisations" class="btn-gold">Nos réalisations</a>
-        <a href="#contact" class="btn-outline-w">Nous contacter</a>
-      </div>
     </div>
   </div>
   <div class="slider-dots">
@@ -552,14 +527,6 @@ function nextSlide(){goSlide(cur+1);}
 function prevSlide(){goSlide(cur-1);}
 function reset(){clearInterval(tmr);tmr=setInterval(nextSlide,6000);}
 reset();
-
-// NAV
-const navEl=document.getElementById('nav');
-window.addEventListener('scroll',()=>navEl.classList.toggle('scrolled',scrollY>60));
-
-// MOBILE NAV
-function toggleMob(){var m=document.getElementById('mobNav'),b=document.getElementById('burger'),o=m.classList.contains('open');m.classList.toggle('open',!o);b.classList.toggle('open',!o);}
-function closeMob(){document.getElementById('mobNav').classList.remove('open');document.getElementById('burger').classList.remove('open');}
 
 // SCROLL REVEAL
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');obs.unobserve(e.target);}}),{threshold:.12});

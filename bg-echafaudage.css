@@ -8,44 +8,25 @@
 .topbar a:hover{color:var(--gold2);}
 .topbar-left{display:flex;gap:28px;align-items:center;}
 
-/* NAV */
-nav{position:sticky;top:0;z-index:999;padding:0 6%;display:flex;align-items:center;justify-content:space-between;height:76px;background:#fff;border-bottom:1px solid rgba(232,184,75,.25);box-shadow:0 2px 12px rgba(0,0,0,.07);transition:height .35s ease,background .35s ease,box-shadow .35s ease;}
-nav.scrolled{height:64px;background:#fff;box-shadow:0 4px 24px rgba(0,0,0,.1);}
-.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;transition:opacity .2s;}
-.nav-logo:hover{opacity:.85;}
-.nav-logo-text{font-family:'Montserrat',sans-serif;font-weight:900;font-size:18px;color:var(--navy);letter-spacing:.5px;}
-.nav-links{display:flex;align-items:center;gap:0;list-style:none;}
-.nav-links li{display:flex;align-items:center;}
-.nav-links li a{position:relative;display:flex;align-items:center;padding:0 18px;height:76px;font-family:'Montserrat',sans-serif;font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:1px;color:rgba(13,22,38,.8);text-decoration:none;transition:color .25s;white-space:nowrap;}
-nav.scrolled .nav-links li a{height:64px;}
-.nav-links li a::after{content:'';position:absolute;bottom:16px;left:50%;transform:translateX(-50%) scaleX(0);width:calc(100% - 36px);height:2px;background:var(--gold);border-radius:2px;transition:transform .3s cubic-bezier(.4,0,.2,1);transform-origin:center;}
-nav.scrolled .nav-links li a::after{bottom:12px;}
-.nav-links li a:hover{color:var(--gold);}
-.nav-links li a:hover::after{transform:translateX(-50%) scaleX(1);}
-.nav-cta{display:inline-flex;align-items:center;background:var(--gold);color:var(--navy)!important;padding:11px 22px;height:auto!important;border-radius:4px;font-family:'Montserrat',sans-serif;font-weight:800!important;font-size:12px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;margin-left:8px;transition:background .25s,transform .25s,box-shadow .25s;position:relative;overflow:hidden;}
-.nav-cta:hover{background:var(--gold2)!important;transform:translateY(-1px);box-shadow:0 6px 20px rgba(232,184,75,.35);}
-/* Shimmer CTA — spécificité plus haute pour écraser l'underline */
-.nav-links li a.nav-cta::after{content:'';position:absolute;inset:0;bottom:0;width:100%;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.3) 50%,transparent 65%);transform:translateX(-120%);transition:transform .5s ease;pointer-events:none;border-radius:0;}
-.nav-links li a.nav-cta:hover::after{transform:translateX(120%);}
-.burger{display:none;flex-direction:column;justify-content:center;gap:5px;cursor:pointer;padding:8px;width:40px;height:40px;}
-.burger span{display:block;width:24px;height:2px;background:var(--navy);transition:transform .35s cubic-bezier(.4,0,.2,1),opacity .25s ease;transform-origin:center;}
-.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
-.burger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
-.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-/* MOBILE NAV — slide down */
-.mob-nav{position:fixed;top:76px;left:0;right:0;z-index:998;background:rgba(255,255,255,.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:8px 6% 24px;display:flex;flex-direction:column;gap:0;transform:translateY(-8px);opacity:0;pointer-events:none;transition:transform .35s cubic-bezier(.4,0,.2,1),opacity .3s ease;border-bottom:2px solid var(--gold);box-shadow:0 20px 40px rgba(27,42,74,.12);}
-.mob-nav.open{transform:translateY(0);opacity:1;pointer-events:all;}
-.mob-nav a{font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;color:var(--navy);text-decoration:none;text-transform:uppercase;letter-spacing:1px;padding:16px 0;border-bottom:1px solid rgba(27,42,74,.08);transition:color .2s,padding-left .2s;}
-.mob-nav a:last-child{border-bottom:none;}
-.mob-nav a:hover{color:var(--gold);padding-left:8px;}
-.mob-cta{display:inline-flex!important;align-items:center;justify-content:center;background:var(--gold);color:var(--navy)!important;padding:14px 24px!important;border-radius:4px;margin-top:12px;font-weight:800!important;transition:background .25s!important;}
-.mob-cta:hover{background:var(--gold2);padding-left:24px!important;}
-.mob-close{display:none;}
-nav.scrolled~.mob-nav{top:64px;}
+/* BARRE DE BOUTONS */
+.btn-nav-top{position:absolute;top:20px;left:6%;z-index:10;}
+.btn-nav-bar{position:absolute;bottom:160px;right:6%;z-index:10;display:flex;flex-direction:column;align-items:flex-end;gap:12px;background:transparent;}
+.btn-nav{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:#fff;text-decoration:none;border:2px solid rgba(255,255,255,.35);border-radius:4px;background:rgba(0,0,0,.18);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:all .25s;white-space:nowrap;cursor:pointer;}
+.btn-nav:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.7);color:#fff;}
+.btn-nav-logo{gap:8px;font-weight:900;font-size:11px;border-color:var(--gold);background:rgba(0,0,0,.25);}
+.btn-nav-logo:hover{background:rgba(232,184,75,.2);border-color:var(--gold2);}
+.btn-nav-logo-img{height:26px;width:auto;object-fit:contain;}
+.btn-nav-devis{background:var(--gold);color:var(--navy);border-color:var(--gold);font-weight:800;backdrop-filter:none;}
+.btn-nav-devis:hover{background:var(--gold2);border-color:var(--gold2);color:var(--navy);}
+@media(max-width:640px){
+.btn-nav-top{top:12px;left:4%;}
+.btn-nav-bar{bottom:100px;right:3%;gap:8px;}
+.btn-nav{padding:7px 10px;font-size:10px;}
+.btn-nav-logo-img{height:26px;}}
 
 /* HERO SLIDER */
 .hero{position:relative;height:100vh;height:100dvh;min-height:580px;overflow:hidden;}
-.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;display:flex;align-items:center;z-index:1;}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;display:flex;align-items:center;z-index:1;padding-top:90px;padding-bottom:80px;}
 .slide.active{opacity:1;}
 .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0;}
 .slide-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,22,38,.87) 0%,rgba(13,22,38,.5) 55%,transparent 100%);z-index:1;}
