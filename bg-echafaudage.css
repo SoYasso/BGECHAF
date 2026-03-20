@@ -20,7 +20,7 @@
 .btn-nav-devis:hover{background:var(--gold2);border-color:var(--gold2);color:var(--navy);}
 @media(max-width:640px){
 .btn-nav-top{top:12px;left:50%;transform:translateX(-50%);}
-.btn-nav-bar{bottom:100px;right:3%;gap:8px;}
+.btn-nav-bar{bottom:auto;top:65px;right:3%;left:3%;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:6px;}
 .btn-nav{padding:7px 10px;font-size:10px;}
 .btn-nav-logo-img{height:26px;}}
 
