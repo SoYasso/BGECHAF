@@ -511,7 +511,7 @@
   var v=document.getElementById('heroVideo');
   if(!v)return;
   var isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)&&!window.MSStream;
-  var rate=isIOS?0.53:0.315;
+  var rate=isIOS?0.5:0.315;
   v.addEventListener('canplay',function(){
     try{v.playbackRate=rate;}catch(e){}
     v.play().catch(function(){});
